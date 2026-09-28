@@ -56,8 +56,11 @@ LOCAL_SHARED_LIBRARIES := \
     libexynosv4l2 \
     libion_exynos \
     libcsc \
-    libExynosOMX_Resourcemanager \
-    libepicoperator
+    libExynosOMX_Resourcemanager
+
+ifeq ($(BOARD_OMX_USES_EPIC), true)
+LOCAL_SHARED_LIBRARIES += libepicoperator
+endif
 
 LOCAL_C_INCLUDES := \
 	$(EXYNOS_OMX_INC)/exynos \

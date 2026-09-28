@@ -1,0 +1,7 @@
+// Compatibility namespace for the legacy Exynos 7870 OpenMAX stack.
+soong_namespace {
+    imports: [
+        "hardware/samsung_slsi-linaro/exynos",
+        "hardware/samsung_slsi-linaro/graphics",
+    ],
+}
